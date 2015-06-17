@@ -167,7 +167,7 @@ fi
 POST_COMMIT=scripts/post_compile
 if [ -f $POST_COMMIT -a -x $POST_COMMIT ]
 then
-	$POST_COMMIT
+	$POST_COMMIT "${build}" "${cache}"
 fi
 
 rm -rf $build/.heroku
