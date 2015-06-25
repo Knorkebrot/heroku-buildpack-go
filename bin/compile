@@ -101,7 +101,7 @@ mkdir -p $build/bin
 GOBIN=$build/bin export GOBIN
 GOROOT=$cache/$ver/go export GOROOT
 GOPATH=$build/.heroku/go export GOPATH
-PATH=$GOROOT/bin:$GOPATH/bin:$PATH export PATH
+PATH=$GOROOT/bin:$GOBIN:$PATH export PATH
 
 
 if ! (test -d $build/Godeps || (which hg >/dev/null && which bzr >/dev/null))
